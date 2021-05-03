@@ -1,0 +1,67 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0.875rem 2.1875rem;
+    font-family: 'Public Sans', sans-serif;
+    font-size: $font-sm;
+    font-weight: 300;
+    color: $grayishBlue;
+    font-weight: 300;
+}
+
+
+a, a:visited, a:hover{
+    text-decoration: none;
+}
+
+.flex{
+    display: flex;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    &-jc-c{
+        justify-content: center;
+    }
+
+    &-ai-c{
+        align-items: center;
+    }
+}
+
+//buttons
+button, .button{
+    padding: 1rem 1.875rem;
+    background-image: linear-gradient(to right, $limeGreen, $brightCyan);
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    font-weight: 400; 
+    color: $white;
+}
+
+
+//visibiliity
+// Visibility
+.hide-for-mobile {
+    @include breakpoint-down(medium){
+      display: none;
+    }
+  }
+  
+  .hide-for-desktop {
+    @include breakpoint-up(large){
+      display: none;
+    }
+  }
